@@ -7,19 +7,17 @@ function rumble(){
 }
 			
 function trumpslap(){
-	$("#ts").animate({left: "540px"});
-	$('#ts').animate({webkitTransform: 'rotate(45deg)', left: '+=5%'});
+	$("#ts").animate({left: '+=33%'});
 }
 
 function trumpback(){
-	$("#ts").animate({left: "80px"});
+	$("#ts").animate({left: '-=33%'});
 }
 			
 function clintonslap(){
-	$("#cs").animate({left: "540px"});
-	$('#cs').animate({webkitTransform: 'rotate(45deg)', left: '-=5%'});
+	$("#cs").animate({left: '-=33%'});
 }
 
 function clintonback(){
-	$("#cs").animate({left: "1000px"});
+	$("#cs").animate({left: '+=33%'});
 }

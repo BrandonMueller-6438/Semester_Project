@@ -5,6 +5,7 @@
 		<link rel='stylesheet' type='text/css' href='css/nav.css'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script type="text/javascript" src="scripts/slapfight.js"></script>
+		<script type="text/javascript" src="scripts/scroll.js"></script>
 		<script type="text/javascript" src="scripts/nav.js"></script>
 		<script>
 			$(document).ready(function(){
@@ -14,21 +15,56 @@
 	</head>
 
 	<body>
-		<div id="mySidenav" class="sidenav">
-			<a href="javascript:void(0)" class="closebtn" onClick="closeNav()">&times;</a>
-			<a href="#">About Donald J. Trump</a>
-			<a href="#">About Hillary R. Clinton :(</a>
-			<a href="#">Interactive Electoral Map</a>
-			<a href="#">So On And So Fourth...</a>
+		<div class="main" id="Slap">
+			<section style="background-color:red">
+				<span style="font-size:30px;cursor:pointer" onClick="openNav()">&#9776; Navigation</span>
+				<img id="cs" STYLE="position:absolute; TOP:200px; LEFT:1000px; WIDTH:304px; HEIGHT:228px" SRC="resources/clintonserious.jpg" alt="Clinton Is Serious -_- (God Help Us)">
+					<img id="ts" STYLE="position:absolute; TOP:200px; LEFT:80px; WIDTH:304px; HEIGHT:228px" SRC="resources/trumpserious.jpg" alt="Trump Is Serious!">   
+					<div align="center">
+						<br><h1>The Presidential Race 2016,</h1>
+						<h1>Who Will Emerge Victorious!?</h1>
+					</div>
+				<div id="mySidenav" class="sidenav">
+					<a href="javascript:void(0)" class="closebtn" onClick="closeNav()">&times;</a>
+					<a href="#Slap">Slap Fight Of The Century!</a>
+					<a href="#DJT">About Donald J. Trump</a>
+					<a href="#HRC">About Hillary R. Clinton :(</a>
+					<a href="#Electoral">Interactive Electoral Map</a>
+					<a href="#Stats">Statistics</a>
+				</div>
+			</section>
 		</div>
-		<div id="main">
-			<span style="font-size:30px;cursor:pointer" onClick="openNav()">&#9776; Navigation</span>
-			<div align="center">
-				<br><h1>The Presidential Race 2016,</h1>
-				<h1>Who Will Emerge Victoriuous!?</h1>
-			</div>
-			<img id="cs" STYLE="position:absolute; TOP:50px; LEFT:1000px; WIDTH:304px; HEIGHT:228px" SRC="resources/clintonserious.jpg" alt="Clinton Is Serious -_- (God Help Us)">
-			<img id="ts" STYLE="position:absolute; TOP:50px; LEFT:80px; WIDTH:304px; HEIGHT:228px" SRC="resources/trumpserious.jpg" alt="Trump Is Serious!">   
+
+		<div class="main" id="DJT">
+			<section style="background-color:blue">
+				<div id="main">
+					
+				</div>
+			</section>
+		</div>
+
+		<div class="main" id="HRC">
+			<section style="background-color:yellow">
+				<div id="main">
+					
+				</div>
+			</section>
+		</div>
+		
+		<div class="main" id="Electoral">
+			<section style="background-color:green">
+				<div id="main">
+					
+				</div>
+			</section>
+		</div>
+		
+		<div class="main" id="Stats">
+			<section style="background-color:orange">
+				<div id="main">
+					
+				</div>
+			</section>
 		</div>
 	</body>
 </html> 

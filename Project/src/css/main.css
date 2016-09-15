@@ -9,10 +9,18 @@
 
 }
 
+div.background {
+    background:url('Earth.jpg') center 0 no-repeat fixed;
+	height: 1000px;
+    -webkit-box-shadow: 0 0 20px #333;
+    box-shadow: 0 0 20px #333;
+}    
+
 body, html, .main {
     height: 100%;
 }
 
 section {
     min-height: 100%;
+	opacity: 0.8;
 }

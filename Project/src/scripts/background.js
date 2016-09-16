@@ -1,7 +1,11 @@
 $(document).ready(function(){
     var $win = $(window);
 
-    $('div.background').each(function(){
+    var background = document.getElementById("background");
+    var speed = 1.5;
+    window.onscroll = function(){var yOffset = window.pageYOffset;topDiv.style.backgroundPosition = "0px "+ (yOffset / speed) + "px";}
+
+    /*$('div.background').each(function(){
         var scroll_speed = 10;
         var $this = $(this);
         $(window).scroll(function() {
@@ -9,5 +13,5 @@ $(document).ready(function(){
             var bgPosition = 'center '+ bgScroll + 'px';
             $this.css({ backgroundPosition: bgPosition });
         });
-    });
+    });*/
 });

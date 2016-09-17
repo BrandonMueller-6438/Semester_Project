@@ -9,12 +9,26 @@
 
 }
 
-div.background {
-    background:url('Earth.jpg') center 0 no-repeat;
+div.mbackground {
+    background:url('cssResources/Flag.jpg') center 0 no-repeat fixed;
 	height: 1000px;
     -webkit-box-shadow: 0 0 20px #333;
     box-shadow: 0 0 20px #333;
-}    
+}
+
+div.tbackground {
+    background:url('cssResources/Trump.jpg') center 0 no-repeat fixed;
+	height: 1000px;
+    -webkit-box-shadow: 0 0 20px #333;
+    box-shadow: 0 0 20px #333;
+}
+
+div.cbackground {
+    background:url('cssResources/Clinton.jpg') center 0 no-repeat fixed;
+	height: 1000px;
+    -webkit-box-shadow: 0 0 20px #333;
+    box-shadow: 0 0 20px #333;
+}     
 
 body, html, .main {
     height: 100%;

@@ -1,0 +1,28 @@
+div.tbtransbox {
+  top:200px;
+  left:0px;
+  width:400px;
+  height:125px;
+  margin: 0px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.8;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.bigtbtransbox {
+  top:200px;
+  left:400px;
+  width:1000px;
+  height:250px;
+  margin: 0px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.8;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.tbtransbox span {
+  font-weight: bold;
+  color: #000000;
+}

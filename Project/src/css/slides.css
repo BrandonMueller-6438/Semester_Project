@@ -1,0 +1,13 @@
+.slider {
+  width: 50%;
+  height: 1000px;
+  overflow-x: scroll;
+}
+.slide {
+  float: left;
+  width: 50%;
+  height: 1000px;
+}
+.holder {
+    width: 200%;
+}

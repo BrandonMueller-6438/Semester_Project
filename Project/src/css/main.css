@@ -38,6 +38,6 @@ body, html, .main {
 }
 
 section {
-    min-height: 100%;
-	opacity: 0.8;
+	min-height: 10%;
+	opacity: 1;
 }

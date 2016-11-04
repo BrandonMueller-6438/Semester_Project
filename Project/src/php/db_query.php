@@ -10,7 +10,7 @@
 	if ($conn->connect_error) {
 		 die("Connection failed: " . $conn->connect_error);
 	}
-	echo "<table width='100%' border='5' cellpadding='10' align='left'>";
+	echo "<table width='100%' border='5' cellpadding='0' align='left'>";
 	$sql = "SELECT * FROM Candidates_T";
 	$result = $conn->query($sql);
 	

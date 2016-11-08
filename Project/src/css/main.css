@@ -63,7 +63,15 @@ div.sbackground {
      1px -1px 0 #000,
     -1px 1px 0 #000,
      1px 1px 0 #000;
-}     
+}   
+
+div.mapbackground {
+    /*background:linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)), url('cssResources/16-9-Poll-booth.jpg') center 0 no-repeat fixed;*/
+	height: 850px;
+    -webkit-box-shadow: 0 0 20px #333;
+    box-shadow: 0 0 20px #333;
+    text-align: center;
+}       
 
 body, html, .main {
     height: 100%;

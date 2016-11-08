@@ -32,7 +32,7 @@
 				fill: blue !important;
 			}
 			path.thirdClick {
-				fill: yellow !important;
+				fill: green !important;
 			}
         </style>
 	</head>
@@ -143,11 +143,11 @@
 						scope: 'usa',
 						element: document.getElementById('container1'),
 						height: 500,
-				  geographyConfig: {
-				    highlightOnHover: false, popupTemplate: function(geography, data) {
-					return '<div class="hoverinfo">' + geography.properties.name + '<br>Electoral Votes: ' +  data.electoralVotes + ' ' },
-					highlightBorderWidth: 3
-				  },
+						geographyConfig: {
+						highlightOnHover: false, popupTemplate: function(geography, data) {
+						return ['<div class="hoverinfo"><strong>', geography.properties.name + '<br>Electoral Votes: ', + data.electoralVotes, '</strong></div>'].join('')},
+						highlightBorderWidth: 3
+				},
 				  fills: {
 				  'Republican': '#CC4731',
 				  'Democrat': '#306596',
@@ -160,35 +160,35 @@
 				data:{
 				  "AZ": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 5
+					  "electoralVotes": 10
 				  },
 				  "CO": {
 					  "fillKey": "Light Democrat",
-					  "electoralVotes": 5
+					  "electoralVotes": 9
 				  },
 				  "DE": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 3
 				  },
 				  "FL": {
 					  "fillKey": "UNDECIDED",
-					  "electoralVotes": 29
+					  "electoralVotes": 27
 				  },
 				  "GA": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 15
 				  },
 				  "HI": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 4
 				  },
 				  "ID": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 4
 				  },
 				  "IL": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 21
 				  },
 				  "IN": {
 					  "fillKey": "Republican",
@@ -196,166 +196,167 @@
 				  },
 				  "IA": {
 					  "fillKey": "Light Democrat",
-					  "electoralVotes": 11
+					  "electoralVotes": 7
 				  },
 				  "KS": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 6
 				  },
 				  "KY": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 8
 				  },
 				  "LA": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 9
 				  },
 				  "MD": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 10
 				  },
 				  "ME": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 4
 				  },
 				  "MA": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 12
 				  },
 				  "MN": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 10
 				  },
 				  "MI": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 17
 				  },
 				  "MS": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 6
 				  },
 				  "MO": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 13
+					  "electoralVotes": 11
 				  },
 				  "MT": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 3
 				  },
 				  "NC": {
 					  "fillKey": "Light Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 15
 				  },
 				  "NE": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 5
 				  },
 				  "NV": {
 					  "fillKey": "Heavy Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 5
 				  },
 				  "NH": {
 					  "fillKey": "Light Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 4
 				  },
 				  "NJ": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 15
 				  },
 				  "NY": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 31
 				  },
 				  "ND": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 3
 				  },
 				  "NM": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 5
 				  },
 				  "OH": {
 					  "fillKey": "UNDECIDED",
-					  "electoralVotes": 32
+					  "electoralVotes": 20
 				  },
 				  "OK": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 7
 				  },
 				  "OR": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 7
 				  },
 				  "PA": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 21
 				  },
 				  "RI": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 4
 				  },
 				  "SC": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 8
 				  },
 				  "SD": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 3
 				  },
 				  "TN": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 11
 				  },
 				  "TX": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 34
 				  },
 				  "UT": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 5
 				  },
 				  "WI": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 10
 				  },
 				  "VA": {
 					  "fillKey": "Light Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 13
 				  },
 				  "VT": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 33
 				  },
 				  "WA": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 11
 				  },
 				  "WV": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 5
 				  },
 				  "WY": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 3
 				  },
 				  "CA": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 55
 				  },
 				  "CT": {
 					  "fillKey": "Democrat",
-					  "electoralVotes": 32
+					  "electoralVotes": 7
 				  },
 				  "AK": {
 					  "fillKey": "Republican",
+					  "electoralVotes": 3
 				  },
 				  "AR": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 6
 				  },
 				  "AL": {
 					  "fillKey": "Republican",
-					  "electoralVotes": 32
+					  "electoralVotes": 9
 				  }
 				},
 
@@ -367,10 +368,12 @@
 						{
 							this.classList.add('republicanClick');
 						}
-						else if(getRadioVal(document.getElementById('partyForm'), 'party') == "D") {
+						else if(getRadioVal(document.getElementById('partyForm'), 'party') == "D")
+						{
 							this.classList.add('democratClick');
 						}
-						else if(getRadioVal(document.getElementById('partyForm'), 'party') == "T") {
+						else if(getRadioVal(document.getElementById('partyForm'), 'party') == "T")
+						{
 							this.classList.add('thirdClick');
 						}
 						

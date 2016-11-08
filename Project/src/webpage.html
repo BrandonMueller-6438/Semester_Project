@@ -5,6 +5,7 @@
 		<link rel='stylesheet' type='text/css' href='css/nav.css'>
 		<link rel='stylesheet' type='text/css' href='css/ease.css'>
 		<link rel='stylesheet' type='text/css' href='css/textbox.css'>
+		<link rel='stylesheet' type='text/css' href='css/mapcolor.css'>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script type="text/javascript" src="scripts/slapfight.js"></script>
@@ -18,23 +19,6 @@
 		<script src="scripts/map/datamaps.usa.min.js"></script>
 		
 		<title>Slap Fight of the Century!</title>
-		
-		<!--Interactive Map CSS-->
-		<!--This will be broken into a separate CSS file later-->
-		<style type="text/css">
-			path:hover {
-				fill: orange !important;
-			}
-			path.republicanClick {
-				fill: red !important;
-			}
-			path.democratClick {
-				fill: blue !important;
-			}
-			path.thirdClick {
-				fill: green !important;
-			}
-        </style>
 	</head>
 
 	<body>
@@ -66,9 +50,6 @@
 				</section>
 			</div>
 		</div>
-		<section>
-			<img id="ts" STYLE="position:absolute;" SRC="resources/Spacer.png">   
-		</section>
 		<div class="tbackground">
 			<div class="main" id="DJT">
 				<section style="background-color:transparent">
@@ -92,9 +73,7 @@
 				</section>
 			</div>
 		</div>
-		<section>
-			<img id="ts" STYLE="position:absolute;" SRC="resources/Spacer.png">   
-		</section>
+		
 		<div class="cbackground">
 			<div class="main" id="HRC">
 				<section style="background-color:transparent">
@@ -117,18 +96,14 @@
 				</section>
 			</div>
 		</div>
-		<section>
-			<img id="ts" STYLE="position:absolute;" SRC="resources/Spacer.png">   
-		</section>
+		
 		<div class="mapbackground" id="Electoral">
 			<section style="background-color:transparent">
 				<div align="center">
-						<div class="tbtransbox">
+						<div style="color: white">
 							<h1>Interactive Electoral Map</h1>
 						</div>
-					</div>
-				<!--<div align="center"><a href="http://www.270towin.com/maps/three-way-electoral-map"><img src="http://www.270towin.com/map-images/three-way-electoral-map" width="800"></a><br><small><img style="vertical-align: middle;" src="http://www.270towin.com/uploads/3rd_party_270_30px.png" alt="" /></small></div> -->
-				
+					</div>				
 				<form action="" id="partyForm">
 					<br>
 					<input name="party" type="radio" value="R"> Republican 
@@ -139,9 +114,9 @@
 				Republican: <input type="text" id="resultR"> &nbsp &nbsp Democrat: <input type="text" id="resultD"><br/><br/>
 				
 				<div id="container1" style="margin: 0 auto; width: 80%; max-height: 450px;"></div>
-
+				
 				<script>
-					  var map = new Datamap({
+					 var map = new Datamap({
 						scope: 'usa',
 						element: document.getElementById('container1'),
 						height: 500,
@@ -149,7 +124,7 @@
 						highlightOnHover: false, popupTemplate: function(geography, data) {
 						return ['<div class="hoverinfo"><strong>', geography.properties.name + '<br>Electoral Votes: ', + data.electoralVotes, '</strong></div>'].join('')},
 						highlightBorderWidth: 3
-				},
+					},
 						  fills: {
 						  'Republican': '#CC4731',
 						  'Democrat': '#306596',
@@ -516,7 +491,7 @@
 							  });
 							  
 						*/
-							 </script>	
+				</script>	
 			</section>
 		</div>
 		<div class="sbackground">
@@ -530,11 +505,6 @@
 			</div>
 		</div>
 		
-		<div class="main" id="Extra">
-			<section style="background-color:transparent">
-				
-			</section>
-		</div>
 		<script>
 			//config
 			$float_speed=1500; //milliseconds

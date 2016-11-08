@@ -1,0 +1,12 @@
+path:hover {
+	fill: orange !important;
+}
+path.republicanClick {
+	fill: red !important;
+}
+path.democratClick {
+	fill: blue !important;
+}
+path.thirdClick {
+	fill: green !important;
+}

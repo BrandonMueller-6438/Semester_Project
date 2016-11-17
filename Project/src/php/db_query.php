@@ -1,7 +1,8 @@
 <?php
 	$servername = "localhost";
 	$username = "root";
-	$password = "Bmm2011*";
+	// $password = "Bmm2011*";
+	$password = "";
 	$dbname = "CS_372_COURSE_PROJECT";
 
 	// Create connection
@@ -10,6 +11,9 @@
 	if ($conn->connect_error) {
 		 die("Connection failed: " . $conn->connect_error);
 	}
+
+	echo "<link rel='stylesheet' type='text/css' href='../css/itable.css'>";
+	echo "<body>";
 	echo "<table width='100%' border='5' cellpadding='0' align='left'>";
 	$sql = "SELECT * FROM Candidates_T";
 	$result = $conn->query($sql);
@@ -34,16 +38,16 @@
 	if($result->num_rows > 0){
 		while($row = $result->fetch_assoc()){
 			echo "<tr>";
-			echo "<th>". $row["Can1Poll"] ."</th>";
-			echo "<th>". $row["Can2Poll"] ."</th>";
-			echo "<th>". $row["Can3Poll"] ."</th>";
-			echo "<th>". $row["DateOfRecord"] ."</th>";
+			echo "<td>". $row["Can1Poll"] ."</td>";
+			echo "<td>". $row["Can2Poll"] ."</td>";
+			echo "<td>". $row["Can3Poll"] ."</td>";
+			echo "<td>". $row["DateOfRecord"] ."</td>";
 			echo "</tr>";
 		}
 	} else {
 		echo "No Data";
 	}
-	echo "</table>";
+	echo "</table></body>";
 
 	$conn->close();
 ?> 

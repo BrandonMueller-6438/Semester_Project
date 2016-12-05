@@ -30,10 +30,10 @@
 		}
 		else
 		{
-			$sql = sprintf("INSERT INTO `users_t` (`Username`, `Password`) VALUES ('%s', '%s')", $connection->real_escape_string($_POST["username"]), $connection->real_escape_string($_POST["password1"]));
+			$sql = sprintf("INSERT INTO `users_t` (`Username`, `Password`) VALUES ('%s', password('%s'))", $connection->real_escape_string($_POST["username"]), $connection->real_escape_string($_POST["password1"]));
 
 			// execute query
-			$result = $connection->query($sql) or die(mysqli_error($connection));  
+			$result = $connection->query($sql) or die(mysqli_error($connection));
 
 			if ($result === false)
 				die("Could not query database");

@@ -13,27 +13,20 @@
 		if (empty($_POST['username']) || empty($_POST['password'])) {
 			$error = "Username or Password is invalid";
 		} else {
-			// Define $username and $password
-			$username=$_POST['username'];
-			$password=$_POST['password'];
 			// Establishing Connection with Server by passing server_name, user_id and password as a parameter
-			$connection = mysql_connect($servername, $server_username, $server_password);
-			$username = stripslashes($username);
-			$password = stripslashes($password);
-			$username = mysql_real_escape_string($username);
-			$password = mysql_real_escape_string($password);
-			// Selecting Database
-			$db = mysql_select_db($dbname, $connection);
+			$connection = new mysqli($servername, $server_username, $server_password, $dbname);
+			// Define $username and $password
+			$username = $connection->real_escape_string($_POST["username"]);
+			$password = $connection->real_escape_string($_POST["password"]);
 			// SQL query to fetch information of registerd users and finds user match.
-			$query = mysql_query("SELECT * FROM users_t WHERE Password='$password' AND Username='$username'", $connection);
-			$rows = mysql_num_rows($query);
-			if ($rows == 1) {
+			$sql = sprintf("SELECT * FROM users_t WHERE Username='%s' AND Password=password('%s')", $username, $password);
+			$result = $connection->query($sql) or die(mysqli_error($connection));
+			if ($result === false) {
+				$error = "Username or Password is invalid";
+			} else {
 				$_SESSION['login_user']=$username; // Initializing Session
 				header("location: ../webpage.php"); // Redirecting To Other Page
-			} else {
-				$error = "Username or Password is invalid";
 			}
-			mysql_close($connection); // Closing Connection
 		}
 	}
 ?>

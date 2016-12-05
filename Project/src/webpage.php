@@ -40,7 +40,7 @@
 		<div id="login" class="login">
 			<?php if(isset($_SESSION['login_user'])): ?>
 				<form action="php/logout.php" method="post" class="login">
-					Welcome <span id="username"></span>!
+					Welcome <span id="username"></span>! 
 					<input type="submit" name="Logout" id="logout_button" value="Logout">
 					<script type="text/javascript">
 						var username="<?php echo $_SESSION['login_user'] ?>";
@@ -48,8 +48,9 @@
 					</script>
 				</form>
 			<?php else: ?>
-				<form action="php/index.php" method="post" class="login">
-					<input type="submit" name="Login" id="login_button" value="Login">
+				<form method="post" class="login">
+					<input type="submit" name="Login" id="login_button" value="Login" formaction="php/index.php">
+					<input type="submit" name="Signup" id="signup_button" value="Signup" formaction="php/signup.php">
 				</form>
 			<?php endif; ?>
 		</div>

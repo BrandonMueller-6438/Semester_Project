@@ -1,3 +1,8 @@
+<?php
+	// enable sessions
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -33,12 +38,20 @@
 			<a href="#Results" onClick="closeNav()">Results</a>
 		</div>
 		<div id="login" class="login">
-			<form action="php/login.php" method="post" class="login">
-				Username:<input type="text" name="username">
-				Password:<input type="password" name="password">
-				<input type="submit" name="Submit">
-				<input type="reset">
-			</form>
+			<?php if(isset($_SESSION['login_user'])): ?>
+				<form action="php/logout.php" method="post" class="login">
+					Welcome <span id="username"></span>!
+					<input type="submit" name="Logout" id="logout_button" value="Logout">
+					<script type="text/javascript">
+						var username="<?php echo $_SESSION['login_user'] ?>";
+						$('#username').html(username);
+					</script>
+				</form>
+			<?php else: ?>
+				<form action="php/index.php" method="post" class="login">
+					<input type="submit" name="Login" id="login_button" value="Login">
+				</form>
+			<?php endif; ?>
 		</div>
 		<div id="fl_menu">
 			<div class="label" onClick="openNav()">Navigation</div>

@@ -1,9 +1,8 @@
 .login {
-	position: fixed;
+	text-align: center;
 	width: 100%;
 	padding: 3px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
 	color: white;
 	background-color: #111;
 }
@@ -11,4 +10,5 @@
 form.login {
 	width: 50%;
 	margin: auto;
+	text-align: center;
 }

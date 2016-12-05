@@ -4,3 +4,5 @@ CREATE TABLE IF NOT EXISTS Users_T
 	Password		VARCHAR(64)	NOT NULL,
 	StateTableID	INT(8)		NOT NULL,
 	CONSTRAINT Users_PK PRIMARY KEY (UserID));
+
+INSERT INTO Users_T Username, Password VALUES ('test', '1234');

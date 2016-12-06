@@ -40,8 +40,8 @@
 		<div id="login" class="login">
 			<?php if(isset($_SESSION['login_user'])): ?>
 				<form action="php/logout.php" method="post" class="login">
-					Welcome <span id="username"></span>! 
-					<input type="submit" name="Logout" id="logout_button" value="Logout">
+					<h3>Welcome <span id="username"></span>!
+					<input type="submit" name="Logout" id="logout_button" class="login_button" value="Logout"></h3>
 					<script type="text/javascript">
 						var username="<?php echo $_SESSION['login_user'] ?>";
 						$('#username').html(username);
@@ -49,8 +49,8 @@
 				</form>
 			<?php else: ?>
 				<form method="post" class="login">
-					<input type="submit" name="Login" id="login_button" value="Login" formaction="php/index.php">
-					<input type="submit" name="Signup" id="signup_button" value="Signup" formaction="php/signup.php">
+					<input type="submit" name="Login" id="login_button" value="Login" class="login_button" formaction="php/index.php">
+					<input type="submit" name="Signup" id="signup_button" value="Signup" class="login_button" formaction="php/signup.php">
 				</form>
 			<?php endif; ?>
 		</div>
@@ -67,7 +67,7 @@
 					<img id="ts" STYLE="position:absolute; TOP:300px; LEFT:20%; WIDTH:304px; HEIGHT:228px" SRC="resources/trumpserious.jpg" alt="Trump Is Serious!">   
 					<div align="center">
 						<div style="color: white">
-							<br><h1>The Presidential Race 2016,</h1>
+							<br><br><h1>The Presidential Race 2016,</h1>
 							<h1>Who Will Emerge Victorious!?</h1>
 						</div>
 					</div>

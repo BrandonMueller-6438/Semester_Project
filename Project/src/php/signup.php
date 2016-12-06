@@ -49,15 +49,20 @@
 <html>
 	<head>
 		<title>Signup</title>
+		<link href="../css/signup_page.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-		<div style="text-align:center">
-			<form action="<?= $_SERVER["PHP_SELF"] ?>" method="post">
-				Name: <input name="username" type="text"><br>
-				Password: <input name="password1" type="password"> <br>
-				Password (again): <input name="password2" type="password"> <br>
-				<input type="submit" name="signup" value="Sign Up">
-			</form>
+		<div id="main" style="text-align:center">
+			<h2>Login Form</h2>
+			<div id="signup">
+				<form action="<?= $_SERVER["PHP_SELF"] ?>" method="post">
+					<br>
+					Name: <input name="username" type="text"><br>
+					Password: <input name="password1" type="password"> <br>
+					Password (again): <input name="password2" type="password"> <br><br>
+					<input type="submit" name="signup" value="Sign Up">
+				</form>
+			</div>
 		</div>
 	</body>
 </html>

@@ -10,18 +10,18 @@
 <html>
 	<head>
 		<title>Login</title>
-		<link href="style.css" rel="stylesheet" type="text/css">
+		<link href="../css/login_page.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-		<div id="main">
+		<div id="main" style="text-align:center">
+			<h2>Login Form</h2>
 			<div id="login">
-				<h2>Login Form</h2>
 				<form action="" method="post">
 					<label>Username :</label>
-					<input id="name" name="username" placeholder="username" type="text">
+					<input id="name" name="username" placeholder="username" type="text"> <br>
 					<label>Password :</label>
-					<input id="password" name="password" placeholder="**********" type="password">
-					<input name="submit" type="submit" value=" Login ">
+					<input id="password" name="password" placeholder="**********" type="password"> <br><br>
+					<input name="submit" type="submit" value=" Login "> <br><br>
 					<input type="reset">
 					<span><?php echo $error; ?></span>
 				</form>

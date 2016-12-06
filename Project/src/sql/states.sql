@@ -3,8 +3,8 @@
 
 I could either have 50 constraints that stops
 any values other than R, D, or T - Which Represents
-Republicn, Democrat, or Third Party ... But That's
-Rediculous..
+Republican, Democrat, or Third Party ... But That's
+Ridiculous..
 
 */
 DROP TABLE States_T;

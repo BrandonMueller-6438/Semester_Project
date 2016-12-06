@@ -38,8 +38,6 @@ INSERT INTO Stats_T(Can1Poll, Can2Poll, Can3Poll, DateOfRecord) VALUES
 ('46%','44%','No Data',str_to_date('OCT,28,16 15,45','%b,%d,%Y %i,%s')),
 ('40%','46%','6%',str_to_date('OCT,27,16 15,45','%b,%d,%Y %i,%s'));
 
-/* Add More Data Here For Before October 27th, 2016 */
-
 SELECT * FROM STATS_T;
 
 DELETE FROM Stats_T

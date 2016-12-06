@@ -130,7 +130,7 @@
 					</div>				
 				<form action="" id="partyForm">
 					<br>
-					<input name="party" type="radio" value="R"> Republican 
+					<input name="party" type="radio" value="R" checked> Republican 
 					<input name="party" type="radio" value="D"> Democrat
 					<input name="party" type="radio" value="T"> Third Party <br/><br/>
 				</form>

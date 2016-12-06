@@ -368,8 +368,6 @@
 								if(getRadioVal(document.getElementById('partyForm'), 'party') == "R")
 								{
 									this.classList.add('republicanClick');
-									//console.log(map.options.data[geography]);
-									//map.options.data[geography] = "Republican";
 									console.log(geography.id);
 									var new_fills = {
 									  [geography.id] : {
@@ -380,7 +378,6 @@
 								}
 								else if(getRadioVal(document.getElementById('partyForm'), 'party') == "D") {
 									this.classList.add('democratClick');
-									//console.log(map.options.data[geography]);
 									console.log(geography.id);
 									var new_fills = {
 									  [geography.id] : {
@@ -397,30 +394,13 @@
 								var demVotes = 0;
 								
 								for (key in map.options.data) {
-									//console.log("hit loop");
-									//console.log(key);
-									//console.log(map.options.data);
-									//var data = {};
-									//data[key] = "Neutral";
-									//console.log(map.options.data);
-									//console.log(map.options.data[key].electoralVotes);
 									
 									if(map.options.data[key].fillKey == "Republican" || map.options.data[key].fillKey == "Light Republican") {
 										repubVotes = repubVotes + map.options.data[key].electoralVotes;
-										//demVotes = demVotes - repubVotes;
-										//repubVotes = 200;
 									};
 									if(map.options.data[key].fillKey == "Democrat" || map.options.data[key].fillKey == "Light Democrat") {
 										demVotes = demVotes + map.options.data[key].electoralVotes;
-										//repubVotes = repubVotes - demVotes;
 									};	
-									/*
-									if(map.options.data[key].fillKey == "ThirdParty") {
-										demVotes = demVotes + map.options.data[key].electoralVotes;
-									};	
-									*/			
-									//console.log(data);
-									//map.updateChoropleth(data);
 								}
 								console.log(repubVotes);
 								console.log(demVotes);
@@ -428,11 +408,10 @@
 								resultR.value=repubVotes;
 								resultD.value=demVotes;
 								
-								//console.log(map.options.data[geography].fillKey);	
 
-										});
-								}
-							  });
+								});
+							}
+						});
 						function getRadioVal(form, name) {
 							var val;
 							// get list of radio buttons with specified name
@@ -447,72 +426,6 @@
 							}
 							return val; // return value of checked radio or undefined if none checked
 						}
-
-						/*
-						function voteCount(datamap) {
-									datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-										alert(geography.properties.name);
-										
-										for (key in map.options.data) {
-											//console.log("hit loop");
-											console.log(key);
-											//console.log(map.options.data);
-											//var data = {};
-											//data[key] = "Neutral";
-											console.log(data[key]);
-											console.log(data);
-											map.updateChoropleth(data);
-										}
-										
-										console.log("hit indiana");
-										map.updateChoropleth({
-											"IN": {fillKey: "Democrat"},});
-										});
-								}
-							  });
-							  */
-
-						/*
-							done: function(datamap) {
-							  datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-								var selectedGeo = {};
-								selectedGeo[geography.id] = '#ED1ADF';
-								datamap.updateChoropleth(selectedGeo);
-							  }
-							};   
-							   
-								done: function(datamap) {
-							  datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-								var selectedGeo = {};
-								selectedGeo[geography.id] = '#ED1ADF';
-								datamap.updateChoropleth(selectedGeo);
-										});
-								}
-							  });
-
-								done: function(datamap) {
-									datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-										alert(geography.properties.name);
-										
-										for (key in map.options.data) {
-											//console.log("hit loop");
-											console.log(key);
-											//console.log(map.options.data);
-											var data = {};
-											data[key] = "Neutral";
-											console.log(data[key]);
-											console.log(data);
-											map.updateChoropleth(data);
-										}
-										
-										console.log("hit indiana");
-										map.updateChoropleth({
-											"IN": {fillKey: "Democrat"},});
-										});
-								}
-							  });
-							  
-						*/
 				</script>	
 			</section>
 		</div>

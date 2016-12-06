@@ -79,7 +79,7 @@
 				<section style="background-color:transparent">
 					<div align="center">
 						<div style="color: white">
-							<h1>About Donald J. Trump</h1>
+							<br><br><h1>About Donald J. Trump</h1>
 						</div>
 					</div>
 					<div style="color: white">
@@ -103,7 +103,7 @@
 				<section style="background-color:transparent">
 					<div align="center">
 						<div style="color: white">
-							<h1>About Hillary R. Clinton</h1>
+							<br><br><h1>About Hillary R. Clinton</h1>
 						</div>
 					</div>
 					<div style="color: white">
@@ -125,7 +125,7 @@
 			<section style="background-color:transparent">
 				<div align="center">
 						<div style="color: white">
-							<h1>Interactive Electoral Map</h1>
+							<br><br><h1>Interactive Electoral Map</h1>
 						</div>
 					</div>				
 				<form action="" id="partyForm">
@@ -433,7 +433,7 @@
 			<div class="main" id="Stats">
 				<section style="background-color:transparent">
 					<div align="center" style="color: white">
-						<h1>Election Statistics</h1>
+						<br><br><h1>Election Statistics</h1>
 						<iframe style="WIDTH:50%; HEIGHT:400px; background-color:white;" src="php/db_query.php" allowTransparency="true"></iframe>
 					</div>
 				</section>
@@ -443,7 +443,7 @@
 			<div class="main" id="Results">
 				<section style="background-color:transparent">
 					<div align="center" style="color: white">
-						<h1>Trump Wins!</h1>
+						<br><br><h1>Trump Wins!</h1>
 					</div>
 					<div style="color: white">
 						<ul align="left">

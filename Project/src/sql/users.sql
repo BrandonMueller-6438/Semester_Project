@@ -6,4 +6,4 @@ CREATE TABLE Users_T
 	Password		VARCHAR(64)	NOT NULL,
 	StateTableID	INT(8)		NOT NULL,
 	CONSTRAINT Users_PK PRIMARY KEY (UserID),
-	CONSTRAINT States_FK FOREIGN KEY (StateTableID) REFERENCES states_t(StateTableID));
+	/*CONSTRAINT States_FK FOREIGN KEY (StateTableID) REFERENCES states_t(StateTableID)*/);
